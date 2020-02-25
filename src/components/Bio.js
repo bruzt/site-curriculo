@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 
 import fotoPerfil from '../assets/img/bruno.jpg';
+import cv from '../assets/pdf/bruno-zutim-cv.pdf';
 
 export default function Bio() {
 
@@ -24,6 +25,7 @@ export default function Bio() {
             </div>
 
             <div className='data-networks'>
+
                 <div className="data">
                     <p className="name">Bruno Zutim</p>
                     <div className="infos">
@@ -48,8 +50,35 @@ export default function Bio() {
                         </div>
                     </div>
                 </div>
-                <div className="networks">
 
+                <div className="networks">
+                    <ul>
+                        <li>
+                            <button onClick={() => window.open(cv)}>
+                                Download CV
+                            </button>
+                        </li>
+                        <li>
+                            <a href="https://www.linkedin.com/in/bruno-zutim-40877010a/" target="_blank" rel="noopener noreferrer">
+                                <i className='fa fa-linkedin'></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://github.com/bruzt" target="_blank" rel="noopener noreferrer">
+                                <i className='fa fa-github'></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://twitter.com/brunozutim" target="_blank" rel="noopener noreferrer">
+                                <i className='fa fa-twitter'></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://facebook.com/bzutim" target="_blank" rel="noopener noreferrer">
+                                <i className='fa fa-facebook'></i>
+                            </a>
+                        </li>
+                    </ul>
                 </div>
             </div>
 
@@ -86,7 +115,7 @@ const Container = styled.div`
         .bio {
             p {
                 text-align: justify;
-                padding: 5px 10px 0 10px;
+                padding: 10px;
             }
         } 
     }
@@ -130,6 +159,28 @@ const Container = styled.div`
 
         .networks {
             border-top: 2px solid ${(props) => props.theme.secondary};
+
+            ul {
+                display: flex;
+                justify-content: space-around;
+                align-items: center;
+                margin: 8px 0 0 0;
+
+                li {
+                    
+                    i {
+                        color: ${(props) => props.theme.text};
+                        font-size: 30px;
+                    }
+
+                    button {
+                        padding: 5px 10px;
+                        border: none;
+                        background: ${(props) => props.theme.primary};
+                        color: ${(props) => props.theme.background};
+                    }
+                }
+            }
         }
     }
 `;
