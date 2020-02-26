@@ -9,7 +9,7 @@ export default function Footer(props) {
         <Container>
             <p>Bruno Zutim, 2020</p>
             <p>Este site foi feito em React por mim</p>
-            <p>Você pode ver o código fonte <a href="http://google.com" target="_blank" rel="noopener noreferrer">aqui</a></p>
+            <p>Você pode ver o código fonte <a href="https://github.com/bruzt/site-curriculo" target="_blank" rel="noopener noreferrer">aqui</a></p>
         
             <div className="theme-button">
                 <button type='button' onClick={props.switchTheme} title='Tema'>
