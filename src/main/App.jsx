@@ -1,26 +1,41 @@
 import React, { useState } from 'react';
 import { ThemeProvider } from 'styled-components';
 
-import '../dependencies/jquery';
-import 'bootstrap/dist/js/bootstrap.bundle';
-import 'bootstrap/dist/css/bootstrap.min.css';
-import 'font-awesome/css/font-awesome.min.css';
-
-import GlobalStyle from './GlobalStyle';
-
 import lightTheme from '../themes/light';
 import darkTheme from '../themes/dark';
 
+import GlobalStyle from './GlobalStyle';
 import Routes from './Routes';
 
 export default function App() {
 
-    const [themeState, setTheme] = useState(lightTheme);
+    const [themeState, setTheme] = useState(() => {
+
+        const theme = JSON.parse(localStorage.getItem('theme'));
+
+        if(theme){
+    
+            return theme;
+    
+        } else {
+    
+            localStorage.setItem('theme', JSON.stringify(lightTheme));
+            return lightTheme;
+        }
+    });
 
     function switchTheme(){
+        
+        if(themeState.title === "light"){
 
-        if(themeState.title === "light") setTheme(darkTheme);
-        else setTheme(lightTheme);
+            localStorage.setItem('theme', JSON.stringify(darkTheme));
+            setTheme(darkTheme);
+
+        } else {
+
+            localStorage.setItem('theme', JSON.stringify(lightTheme));
+            setTheme(lightTheme)
+        }
     }
 
     return (

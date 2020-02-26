@@ -9,7 +9,7 @@ export default function Routes(props) {
         <BrowserRouter>
             <Switch>
 
-                <Route exact path='/' component={Home} switchTheme={props.switchTheme}  />
+                <Route exact path='/' component={() => <Home switchTheme={props.switchTheme} />} />
 
                 <Redirect from='*' to='/' />
 

@@ -3,8 +3,9 @@ import styled from 'styled-components';
 
 import Bio from '../components/Bio';
 import Skills from '../components/Skills';
+import Footer from '../components/Footer';
 
-export default function Home() {
+export default function Home(props) {
 
     return (
         <Container>
@@ -13,10 +14,13 @@ export default function Home() {
 
             <Skills />
 
+            <Footer switchTheme={props.switchTheme} />
+
         </Container>
     );
 }
 
 const Container = styled.div`
-    margin: 50px 0 0 0;
+    display: grid;
+    grid-template-rows: auto auto auto;
 `;

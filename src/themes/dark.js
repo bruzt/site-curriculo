@@ -2,9 +2,10 @@
 export default {
 
     title: 'dark',
+    maxWidth: '700px',
 
-    primary: '#808f87',
-    secondary: '#f4b266',
+    primary: '#b393db',
+    secondary: '#60634b',
     text: '#f5f5f5',
     background: '#464e47'
 

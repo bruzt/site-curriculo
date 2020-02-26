@@ -1,5 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faLinkedin, faGithub, faTwitter, faFacebook } from '@fortawesome/free-brands-svg-icons';
 
 import fotoPerfil from '../assets/img/bruno.jpg';
 import cv from '../assets/pdf/bruno-zutim-cv.pdf';
@@ -59,23 +61,23 @@ export default function Bio() {
                             </button>
                         </li>
                         <li>
-                            <a href="https://www.linkedin.com/in/bruno-zutim-40877010a/" target="_blank" rel="noopener noreferrer">
-                                <i className='fa fa-linkedin'></i>
+                            <a href="https://www.linkedin.com/in/bruno-zutim-40877010a/" target="_blank" rel="noopener noreferrer" title='LinkedIn'>
+                                <FontAwesomeIcon className='fai' icon={faLinkedin} />
                             </a>
                         </li>
                         <li>
-                            <a href="https://github.com/bruzt" target="_blank" rel="noopener noreferrer">
-                                <i className='fa fa-github'></i>
+                            <a href="https://github.com/bruzt" target="_blank" rel="noopener noreferrer" title='Github'>
+                                <FontAwesomeIcon className='fai' icon={faGithub} />
                             </a>
                         </li>
                         <li>
-                            <a href="https://twitter.com/brunozutim" target="_blank" rel="noopener noreferrer">
-                                <i className='fa fa-twitter'></i>
+                            <a href="https://twitter.com/brunozutim" target="_blank" rel="noopener noreferrer" title='Twitter'>
+                                <FontAwesomeIcon className='fai' icon={faTwitter} />
                             </a>
                         </li>
                         <li>
-                            <a href="https://facebook.com/bzutim" target="_blank" rel="noopener noreferrer">
-                                <i className='fa fa-facebook'></i>
+                            <a href="https://facebook.com/bzutim" target="_blank" rel="noopener noreferrer" title='Facebook'>
+                                <FontAwesomeIcon className='fai' icon={faFacebook} />
                             </a>
                         </li>
                     </ul>
@@ -86,11 +88,11 @@ export default function Bio() {
     );
 }
 
-const Container = styled.div`
+const Container = styled.main`
     width: 100%;
     max-width: 800px;
     height: 510px;
-    margin: 0 auto;
+    margin: 50px auto 0 auto;
     border: 2px solid ${(props) => props.theme.secondary};
 
     display: grid;
@@ -114,6 +116,7 @@ const Container = styled.div`
 
         .bio {
             p {
+                line-height: 22px;
                 text-align: justify;
                 padding: 10px;
             }
@@ -168,7 +171,7 @@ const Container = styled.div`
 
                 li {
                     
-                    i {
+                    .fai {
                         color: ${(props) => props.theme.text};
                         font-size: 30px;
                     }
@@ -181,6 +184,23 @@ const Container = styled.div`
                     }
                 }
             }
+        }
+    }
+
+    @media (max-width: ${(props) => props.theme.maxWidth}) {
+        grid-template-columns: 1fr;
+        grid-template-rows: 420px 550px;
+        margin: 10px 0 0 0;
+        border: none;
+
+        .photo-bio {
+            border: none;
+            border-bottom: 2px solid ${(props) => props.theme.secondary};
+        }
+
+        .data-networks {
+            border: none;
+            border-bottom: 2px solid ${(props) => props.theme.secondary};
         }
     }
 `;
