@@ -184,6 +184,13 @@ const Container = styled.section`
 
         .techs {
             border: none;
+
+            .progress-b {
+
+                span {
+                    padding: 1px 0 0 0;
+                }
+            }
         }        
     }
 
