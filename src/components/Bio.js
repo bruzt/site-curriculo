@@ -189,7 +189,7 @@ const Container = styled.main`
 
     @media (max-width: 700px) {
         grid-template-columns: 1fr;
-        grid-template-rows: 420px 550px;
+        grid-template-rows: 450px 450px;
         margin: 10px 0 0 0;
         border: none;
 
@@ -201,6 +201,14 @@ const Container = styled.main`
         .data-networks {
             border: none;
             border-bottom: 2px solid ${(props) => props.theme.secondary};
+
+            .data {
+                padding: 10px;
+
+                .name {
+                    margin: 30px 0 0 0;
+                }
+            }
         }
     }
 `;
