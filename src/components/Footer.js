@@ -55,7 +55,7 @@ const Container = styled.footer`
         }
     }
 
-    @media (max-width: ${(props) => props.theme.maxWidth}){
+    @media (max-width: 700px){
         margin: 450px 0 0 0;
     }
 `;

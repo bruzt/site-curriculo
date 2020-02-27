@@ -2,7 +2,6 @@
 export default {
 
     title: 'light',
-    maxWidth: '700px',
 
     primary: '#3d4191',
     secondary: '#dfe0f7',

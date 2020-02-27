@@ -187,7 +187,7 @@ const Container = styled.main`
         }
     }
 
-    @media (max-width: ${(props) => props.theme.maxWidth}) {
+    @media (max-width: 700px) {
         grid-template-columns: 1fr;
         grid-template-rows: 420px 550px;
         margin: 10px 0 0 0;
