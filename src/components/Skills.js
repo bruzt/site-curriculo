@@ -15,6 +15,8 @@ export default function Skills() {
                     <p><FontAwesomeIcon className='fai' icon={faPlus} /> Desenvolvimento Mobile</p>
                     <p><FontAwesomeIcon className='fai' icon={faPlus} /> Desenvolvimento Desktop</p>
                     <p><FontAwesomeIcon className='fai' icon={faPlus} /> Desenvolvimento Backend</p>
+                    <p><FontAwesomeIcon className='fai' icon={faPlus} /> MVC</p>
+                    <p><FontAwesomeIcon className='fai' icon={faPlus} /> REST</p>
                 </div>
             </div>
 
@@ -40,12 +42,12 @@ export default function Skills() {
                     <span>90%</span>
                 </div>
                 <p>CSS3</p>
-                <div className="progress-b pb70" style={{ width: '70%' }}>
-                    <span>70%</span>
+                <div className="progress-b pb60" style={{ width: '60%' }}>
+                    <span>60%</span>
                 </div>
                 <p>CSS Animations</p>
-                <div className="progress-b pb40" style={{ width: '40%' }}>
-                    <span>40%</span>
+                <div className="progress-b pb30" style={{ width: '30%' }}>
+                    <span>30%</span>
                 </div>
                 <p>Node.js</p>
                 <div className="progress-b pb80" style={{ width: '80%' }}>
@@ -95,7 +97,7 @@ const Container = styled.section`
             padding: 0 0 0 10px;
 
             p {
-                margin: 70px 0 0 0;
+                margin: 45px 0 0 0;
 
                 .fai {
                     color: ${(props) => props.theme.primary};
