@@ -170,7 +170,7 @@ const Container = styled.section`
 
     @media (max-width: 700px) {
         grid-template-columns: 1fr;
-        grid-template-rows: 450px 450px;
+        grid-template-rows: 470px 450px;
         margin: 400px 0 0 0;
         border: none;
 
