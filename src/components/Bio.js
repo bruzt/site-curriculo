@@ -36,7 +36,7 @@ export default function Bio() {
             <div className='data-networks'>
 
                 <div className="data">
-                    <p className="name">Bruno Zutim</p>
+                    <h1 className="name">Bruno Zutim</h1>
                     <div className="infos">
                         <div>
                             <p>Cidade</p>        
