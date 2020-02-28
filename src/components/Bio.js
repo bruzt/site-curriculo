@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import styled from 'styled-components';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faLinkedin, faGithub, faTwitter, faFacebook } from '@fortawesome/free-brands-svg-icons';
@@ -7,6 +7,13 @@ import fotoPerfil from '../assets/img/bruno.jpg';
 import cv from '../assets/pdf/bruno-zutim-cv.pdf';
 
 export default function Bio() {
+
+    useEffect( () => {
+
+        document.getElementById('tel').innerHTML = '(19) 9-9253-0189';
+        document.getElementById('eaddr').innerHTML = 'bzutim@gmail.com';
+
+    }, []);
 
     return (
         <Container>
@@ -46,9 +53,9 @@ export default function Bio() {
                         <div className='values'>
                             <p>Cordeirópolis</p>
                             <div className="border-values" />
-                            <p>(19) 9-9253-0189</p>  
+                            <p id='tel' />
                             <div className="border-values" />
-                            <p>bzutim@gmail.com</p>
+                            <p id='eaddr' />
                         </div>
                     </div>
                 </div>
@@ -56,7 +63,7 @@ export default function Bio() {
                 <div className="networks">
                     <ul>
                         <li>
-                            <button onClick={() => window.open(cv)}>
+                            <button type='button' onClick={() => window.open(cv)}>
                                 Download CV
                             </button>
                         </li>
@@ -147,7 +154,6 @@ const Container = styled.main`
 
                     p {
                         padding: 25px 0 25px 0;
-                        
                     }
                 }
 
@@ -155,6 +161,10 @@ const Container = styled.main`
                     .border-values {
                         margin: 0;
                         border-bottom: 2px solid ${(props) => props.theme.secondary};
+                    }
+
+                    .d-none {
+                        display: none;
                     }
                 }
             }
