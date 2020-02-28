@@ -56,6 +56,6 @@ const Container = styled.footer`
     }
 
     @media (max-width: 700px){
-        margin: 450px 0 0 0;
+        margin: 470px 0 0 0;
     }
 `;
