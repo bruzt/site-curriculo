@@ -191,6 +191,10 @@ const Container = styled.main`
                         border: none;
                         background: ${(props) => props.theme.primary};
                         color: ${(props) => props.theme.background};
+
+                        :hover {
+                            cursor: pointer;
+                        }
                     }
                 }
             }

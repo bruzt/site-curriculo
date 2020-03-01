@@ -47,6 +47,10 @@ const Container = styled.footer`
             background: transparent;
             border: none;
             outline: none !important;
+
+            :hover {
+                cursor: pointer;
+            }
         }
 
         .fai {
