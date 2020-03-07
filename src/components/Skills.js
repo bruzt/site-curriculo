@@ -17,6 +17,7 @@ export default function Skills() {
                     <p><FontAwesomeIcon className='fai' icon={faPlus} /> Desenvolvimento Backend</p>
                     <p><FontAwesomeIcon className='fai' icon={faPlus} /> MVC</p>
                     <p><FontAwesomeIcon className='fai' icon={faPlus} /> REST</p>
+                    <p><FontAwesomeIcon className='fai' icon={faPlus} /> TDD</p>
                 </div>
             </div>
 
@@ -97,7 +98,7 @@ const Container = styled.section`
             padding: 0 0 0 10px;
 
             p {
-                margin: 45px 0 0 0;
+                margin: 40px 0 0 0;
 
                 .fai {
                     color: ${(props) => props.theme.primary};
@@ -170,7 +171,7 @@ const Container = styled.section`
 
     @media (max-width: 700px) {
         grid-template-columns: 1fr;
-        grid-template-rows: 470px 450px;
+        grid-template-rows: 500px 450px;
         margin: 400px 0 0 0;
         border: none;
 

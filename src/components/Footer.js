@@ -60,6 +60,6 @@ const Container = styled.footer`
     }
 
     @media (max-width: 700px){
-        margin: 470px 0 0 0;
+        margin: 495px 0 0 0;
     }
 `;
