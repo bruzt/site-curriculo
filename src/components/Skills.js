@@ -75,12 +75,10 @@ export default function Skills() {
 const Container = styled.section`
     width: 100%;
     max-width: 800px;
-    height: 510px;
-    margin: 50px auto 0 auto;
-    border: 2px solid ${(props) => props.theme.secondary};
-
     display: grid;
     grid-template-columns: 279px 1fr;
+    margin: 50px auto 0 auto;
+    border: 2px solid ${(props) => props.theme.secondary};
 
     .skills {
         border-right: 2px solid ${(props) => props.theme.secondary};
@@ -171,15 +169,14 @@ const Container = styled.section`
 
     @media (max-width: 700px) {
         grid-template-columns: 1fr;
-        grid-template-rows: 500px 450px;
-        margin: 400px 0 0 0;
+        grid-template-rows: 500px 470px;
         border: none;
-
 
         .skills {
             border: none;
             border-bottom: 2px solid ${(props) => props.theme.secondary};
-
+            padding: 0;
+            
             .scopes {
                 text-align: center;
             }
@@ -187,6 +184,7 @@ const Container = styled.section`
 
         .techs {
             border: none;
+            padding: 20px;
 
             .progress-b {
 

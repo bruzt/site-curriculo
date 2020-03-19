@@ -21,6 +21,5 @@ export default function Home(props) {
 }
 
 const Container = styled.div`
-    display: grid;
-    grid-template-rows: auto auto auto;
+
 `;

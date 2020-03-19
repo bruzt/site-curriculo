@@ -98,12 +98,10 @@ export default function Bio() {
 const Container = styled.main`
     width: 100%;
     max-width: 800px;
-    height: 510px;
-    margin: 50px auto 0 auto;
-    border: 2px solid ${(props) => props.theme.secondary};
-
     display: grid;
     grid-template-columns: 279px 1fr;
+    margin: 50px auto 0 auto;
+    border: 2px solid ${(props) => props.theme.secondary};
 
     .photo-bio {
         display: grid;
@@ -203,7 +201,7 @@ const Container = styled.main`
 
     @media (max-width: 700px) {
         grid-template-columns: 1fr;
-        grid-template-rows: 450px 450px;
+        grid-template-rows: 420px 420px;
         margin: 10px 0 0 0;
         border: none;
 
@@ -220,7 +218,7 @@ const Container = styled.main`
                 padding: 10px;
 
                 .name {
-                    margin: 30px 0 0 0;
+                    margin: 10px 0 0 0;
                 }
             }
         }

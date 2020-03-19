@@ -58,8 +58,4 @@ const Container = styled.footer`
             color: ${(props) => props.theme.text}
         }
     }
-
-    @media (max-width: 700px){
-        margin: 495px 0 0 0;
-    }
 `;
