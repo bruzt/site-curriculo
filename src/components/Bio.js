@@ -112,10 +112,10 @@ const Container = styled.main`
             margin: 0 auto;
 
             img {
-                max-width:298px;
-                max-height:248px;
                 width: auto;
+                max-width: 275px;
                 height: auto;
+                max-height: 250px;
             }
         }
 
